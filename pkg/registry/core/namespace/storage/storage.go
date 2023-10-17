@@ -265,7 +265,7 @@ func ShouldDeleteNamespaceDuringUpdate(ctx context.Context, key string, obj, exi
 }
 
 func shouldHaveOrphanFinalizer(options *metav1.DeleteOptions, haveOrphanFinalizer bool) bool {
-	//nolint:staticcheck // SA1019 backwards compatibility
+	// nolint:staticcheck // SA1019 backwards compatibility
 	if options.OrphanDependents != nil {
 		return *options.OrphanDependents
 	}
@@ -276,7 +276,7 @@ func shouldHaveOrphanFinalizer(options *metav1.DeleteOptions, haveOrphanFinalize
 }
 
 func shouldHaveDeleteDependentsFinalizer(options *metav1.DeleteOptions, haveDeleteDependentsFinalizer bool) bool {
-	//nolint:staticcheck // SA1019 backwards compatibility
+	// nolint:staticcheck // SA1019 backwards compatibility
 	if options.OrphanDependents != nil {
 		return *options.OrphanDependents == false
 	}

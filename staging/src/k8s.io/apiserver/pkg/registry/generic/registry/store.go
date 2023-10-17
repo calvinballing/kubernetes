@@ -813,9 +813,9 @@ func shouldOrphanDependents(ctx context.Context, e *Store, accessor metav1.Objec
 	}
 
 	// An explicit policy was set at deletion time, that overrides everything
-	//nolint:staticcheck // SA1019 backwards compatibility
+	// nolint:staticcheck // SA1019 backwards compatibility
 	if options != nil && options.OrphanDependents != nil {
-		//nolint:staticcheck // SA1019 backwards compatibility
+		// nolint:staticcheck // SA1019 backwards compatibility
 		return *options.OrphanDependents
 	}
 	if options != nil && options.PropagationPolicy != nil {
@@ -856,7 +856,7 @@ func shouldDeleteDependents(ctx context.Context, e *Store, accessor metav1.Objec
 	}
 
 	// If an explicit policy was set at deletion time, that overrides both
-	//nolint:staticcheck // SA1019 backwards compatibility
+	// nolint:staticcheck // SA1019 backwards compatibility
 	if options != nil && options.OrphanDependents != nil {
 		return false
 	}

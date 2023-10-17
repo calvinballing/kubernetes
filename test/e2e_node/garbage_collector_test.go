@@ -36,7 +36,7 @@ import (
 )
 
 const (
-	//TODO (dashpole): Once dynamic config is possible, test different values for maxPerPodContainer and maxContainers
+	// TODO (dashpole): Once dynamic config is possible, test different values for maxPerPodContainer and maxContainers
 	// Currently using default values for maxPerPodContainer and maxTotalContainers
 	maxPerPodContainer = 1
 	maxTotalContainers = -1
@@ -214,7 +214,7 @@ func containerGCTest(f *framework.Framework, test testRun) {
 						}
 					}
 				}
-				//Check maxTotalContainers.  Currently, the default is -1, so this will never happen until we can configure maxTotalContainers
+				// Check maxTotalContainers.  Currently, the default is -1, so this will never happen until we can configure maxTotalContainers
 				if maxTotalContainers > 0 && totalContainers <= maxTotalContainers && total > maxTotalContainers {
 					return fmt.Errorf("expected total number of containers: %v, to be <= maxTotalContainers: %v", total, maxTotalContainers)
 				}

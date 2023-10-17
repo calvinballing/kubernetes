@@ -87,7 +87,7 @@ func TestConstructResponseWriter(t *testing.T) {
 	}
 
 	actual = decorateResponseWriter(context.Background(), &responsewriter.FakeResponseWriterFlusherCloseNotifier{}, nil, nil, nil)
-	//lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
+	// lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
 	if _, ok := actual.(http.CloseNotifier); !ok {
 		t.Errorf("Expected http.ResponseWriter to implement http.CloseNotifier")
 	}
@@ -99,7 +99,7 @@ func TestConstructResponseWriter(t *testing.T) {
 	}
 
 	actual = decorateResponseWriter(context.Background(), &responsewriter.FakeResponseWriterFlusherCloseNotifierHijacker{}, nil, nil, nil)
-	//lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
+	// lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
 	if _, ok := actual.(http.CloseNotifier); !ok {
 		t.Errorf("Expected http.ResponseWriter to implement http.CloseNotifier")
 	}

@@ -48,7 +48,7 @@ func (opts *CloudProviderOptions) Validate() []error {
 				"please set DisableCloudProviders feature to true", opts.CloudProvider))
 		}
 		if !utilfeature.DefaultFeatureGate.Enabled(features.DisableKubeletCloudCredentialProviders) {
-			errs = append(errs, fmt.Errorf("when using --cloud-provider set to '%s', "+ //nolint:staticcheck,ineffassign // false positive
+			errs = append(errs, fmt.Errorf("when using --cloud-provider set to '%s', "+ // nolint:staticcheck,ineffassign // false positive
 				"please set DisableKubeletCloudCredentialProviders feature to true", opts.CloudProvider))
 		}
 		return nil

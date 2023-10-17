@@ -49,7 +49,7 @@ func StorageWithCacher() generic.StorageDecorator {
 			return s, d, err
 		}
 		if klogV := klog.V(5); klogV.Enabled() {
-			//nolint:logcheck // It complains about the key/value pairs because it cannot check them.
+			// nolint:logcheck // It complains about the key/value pairs because it cannot check them.
 			klogV.InfoS("Storage caching is enabled", objectTypeToArgs(newFunc())...)
 		}
 

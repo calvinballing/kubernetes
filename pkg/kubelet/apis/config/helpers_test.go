@@ -87,7 +87,7 @@ func allPrimitiveFieldPaths(t *testing.T, skipRecurseList sets.String, tp reflec
 	return paths
 }
 
-//lint:file-ignore U1000 Ignore dummy types, used by tests.
+// lint:file-ignore U1000 Ignore dummy types, used by tests.
 
 // dummy helper types
 type foo struct {

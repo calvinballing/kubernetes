@@ -120,7 +120,7 @@ func GetOriginal(w http.ResponseWriter) http.ResponseWriter {
 	return GetOriginal(inner)
 }
 
-//nolint:staticcheck // SA1019
+// nolint:staticcheck // SA1019
 var _ http.CloseNotifier = outerWithCloseNotifyAndFlush{}
 var _ http.Flusher = outerWithCloseNotifyAndFlush{}
 var _ http.ResponseWriter = outerWithCloseNotifyAndFlush{}
@@ -154,7 +154,7 @@ func (wr outerWithCloseNotifyAndFlush) Flush() {
 	wr.InnerCloseNotifierFlusher.Flush()
 }
 
-//lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
+// lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
 var _ http.CloseNotifier = outerWithCloseNotifyFlushAndHijack{}
 var _ http.Flusher = outerWithCloseNotifyFlushAndHijack{}
 var _ http.Hijacker = outerWithCloseNotifyFlushAndHijack{}

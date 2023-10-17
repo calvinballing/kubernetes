@@ -64,7 +64,7 @@ func TestNewManager(t *testing.T) {
 		{
 			name:                 "cluster with local etcd",
 			cfg:                  &kubeadmapi.ClusterConfiguration{},
-			expectedCertificates: 10, //[admin apiserver apiserver-etcd-client apiserver-kubelet-client controller-manager etcd/healthcheck-client etcd/peer etcd/server front-proxy-client scheduler]
+			expectedCertificates: 10, // [admin apiserver apiserver-etcd-client apiserver-kubelet-client controller-manager etcd/healthcheck-client etcd/peer etcd/server front-proxy-client scheduler]
 		},
 		{
 			name: "cluster with external etcd",

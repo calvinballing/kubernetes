@@ -35,7 +35,7 @@ type PodResourceAllocationCheckpoint struct {
 
 // NewPodResourceAllocationCheckpoint returns an instance of Checkpoint
 func NewPodResourceAllocationCheckpoint() *PodResourceAllocationCheckpoint {
-	//lint:ignore unexported-type-in-api user-facing error message
+	// lint:ignore unexported-type-in-api user-facing error message
 	return &PodResourceAllocationCheckpoint{
 		AllocationEntries:   make(map[string]map[string]v1.ResourceList),
 		ResizeStatusEntries: make(map[string]v1.PodResizeStatus),

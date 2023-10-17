@@ -204,7 +204,7 @@ func TestRespLoggerWithDecoratedResponseWriter(t *testing.T) {
 				default:
 				}
 
-				//lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
+				// lint:file-ignore SA1019 Keep supporting deprecated http.CloseNotifier
 				if _, ok := w.(http.CloseNotifier); !ok {
 					t.Errorf("Expected the ResponseWriter object to implement http.CloseNotifier")
 				}

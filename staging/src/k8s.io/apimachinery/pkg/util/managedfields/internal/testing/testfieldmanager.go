@@ -44,7 +44,7 @@ func (f *FakeObjectCreater) New(gvk schema.GroupVersionKind) (runtime.Object, er
 // actually does nothing but return its input.
 type FakeObjectConvertor struct{}
 
-//nolint:staticcheck,ineffassign // SA4009 backwards compatibility
+// nolint:staticcheck,ineffassign // SA4009 backwards compatibility
 func (c *FakeObjectConvertor) Convert(in, out, context interface{}) error {
 	out = in
 	return nil

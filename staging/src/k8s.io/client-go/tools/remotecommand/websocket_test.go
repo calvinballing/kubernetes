@@ -960,7 +960,7 @@ func TestWebSocketClient_EmptyMessageHandled(t *testing.T) {
 		}
 		defer conn.Close()
 		// Send completely empty message, including missing initial stream id.
-		conn.WriteMessage(gwebsocket.BinaryMessage, []byte{}) //nolint:errcheck
+		conn.WriteMessage(gwebsocket.BinaryMessage, []byte{}) // nolint:errcheck
 	}))
 	defer websocketServer.Close()
 
@@ -1297,7 +1297,7 @@ func createWebSocketStreams(req *http.Request, w http.ResponseWriter, opts *opti
 	}
 
 	// Send an empty message to the lowest writable channel to notify the client the connection is established
-	//nolint:errcheck
+	// nolint:errcheck
 	switch {
 	case opts.stdout:
 		streams[remotecommand.StreamStdOut].Write([]byte{})

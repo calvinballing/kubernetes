@@ -143,8 +143,8 @@ func DeleteResource(r rest.GracefulDeleter, allowsOptions bool, scope *RequestSc
 		// that will break existing clients.
 		// Other cases where resource is not instantly deleted are: namespace deletion
 		// and pod graceful deletion.
-		//nolint:staticcheck // SA1019 backwards compatibility
-		//nolint: staticcheck
+		// nolint:staticcheck // SA1019 backwards compatibility
+		// nolint: staticcheck
 		if !wasDeleted && options.OrphanDependents != nil && !*options.OrphanDependents {
 			status = http.StatusAccepted
 		}

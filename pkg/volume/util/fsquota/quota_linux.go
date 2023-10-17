@@ -307,7 +307,7 @@ func SupportsQuotas(m mount.Interface, path string) (bool, error) {
 // AssignQuota chooses the quota ID based on the pod UID and path.
 // If the pod UID is identical to another one known, it may (but presently
 // doesn't) choose the same quota ID as other volumes in the pod.
-func AssignQuota(m mount.Interface, path string, poduid types.UID, bytes *resource.Quantity) error { //nolint:staticcheck
+func AssignQuota(m mount.Interface, path string, poduid types.UID, bytes *resource.Quantity) error { // nolint:staticcheck
 	if bytes == nil {
 		return fmt.Errorf("attempting to assign null quota to %s", path)
 	}

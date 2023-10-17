@@ -108,13 +108,13 @@ var _ = SIGDescribe("API priority and fairness", func() {
 		type client struct {
 			username                    string
 			qps                         float64
-			priorityLevelName           string  //lint:ignore U1000 field is actually used
-			concurrencyMultiplier       float64 //lint:ignore U1000 field is actually used
+			priorityLevelName           string  // lint:ignore U1000 field is actually used
+			concurrencyMultiplier       float64 // lint:ignore U1000 field is actually used
 			concurrency                 int32
-			flowSchemaName              string //lint:ignore U1000 field is actually used
-			matchingPrecedence          int32  //lint:ignore U1000 field is actually used
+			flowSchemaName              string // lint:ignore U1000 field is actually used
+			matchingPrecedence          int32  // lint:ignore U1000 field is actually used
 			completedRequests           int32
-			expectedCompletedPercentage float64 //lint:ignore U1000 field is actually used
+			expectedCompletedPercentage float64 // lint:ignore U1000 field is actually used
 		}
 		clients := []client{
 			// "highqps" refers to a client that creates requests at a much higher
@@ -202,10 +202,10 @@ var _ = SIGDescribe("API priority and fairness", func() {
 		type client struct {
 			username                    string
 			qps                         float64
-			concurrencyMultiplier       float64 //lint:ignore U1000 field is actually used
+			concurrencyMultiplier       float64 // lint:ignore U1000 field is actually used
 			concurrency                 int32
 			completedRequests           int32
-			expectedCompletedPercentage float64 //lint:ignore U1000 field is actually used
+			expectedCompletedPercentage float64 // lint:ignore U1000 field is actually used
 		}
 		clients := []client{
 			{username: highQPSClientName, qps: 90, concurrencyMultiplier: 2.0, expectedCompletedPercentage: 0.90},

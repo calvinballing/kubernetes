@@ -49,7 +49,7 @@ func NewStateCheckpoint(stateDir, checkpointName string) (State, error) {
 	}
 
 	if err := stateCheckpoint.restoreState(); err != nil {
-		//lint:ignore ST1005 user-facing error message
+		// lint:ignore ST1005 user-facing error message
 		return nil, fmt.Errorf("could not restore state from checkpoint: %v, please drain this node and delete pod allocation checkpoint file %q before restarting Kubelet", err, path.Join(stateDir, checkpointName))
 	}
 	return stateCheckpoint, nil

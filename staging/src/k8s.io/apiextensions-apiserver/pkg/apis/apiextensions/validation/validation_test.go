@@ -6139,7 +6139,7 @@ func TestValidateCustomResourceDefinitionUpdate(t *testing.T) {
 							Properties: map[string]apiextensions.JSONSchemaProps{
 								"a": {
 									Type: "number",
-									//Default: jsonPtr(42.0),
+									// Default: jsonPtr(42.0),
 								},
 							},
 						},

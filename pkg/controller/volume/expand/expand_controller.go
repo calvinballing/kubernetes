@@ -454,7 +454,7 @@ func (expc *expandController) GetServiceAccountTokenFunc() func(_, _ string, _ *
 
 func (expc *expandController) DeleteServiceAccountTokenFunc() func(types.UID) {
 	return func(types.UID) {
-		//nolint:logcheck
+		// nolint:logcheck
 		klog.ErrorS(nil, "DeleteServiceAccountToken unsupported in expandController")
 	}
 }

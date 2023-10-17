@@ -216,7 +216,7 @@ func (m *manager) Start() {
 
 	klog.InfoS("Starting to sync pod status with apiserver")
 
-	//nolint:staticcheck // SA1015 Ticker can leak since this is only called once and doesn't handle termination.
+	// nolint:staticcheck // SA1015 Ticker can leak since this is only called once and doesn't handle termination.
 	syncTicker := time.NewTicker(syncPeriod).C
 
 	// syncPod and syncBatch share the same go routine to avoid sync races.
