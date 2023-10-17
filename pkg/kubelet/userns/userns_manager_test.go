@@ -32,7 +32,7 @@ type testUserNsPodsManager struct {
 }
 
 func (m *testUserNsPodsManager) GetPodDir(podUID types.UID) string {
-	return "/tmp/non-existant-dir.This-is-not-used-in-tests"
+	return "/tmp/non-existent-dir.This-is-not-used-in-tests"
 }
 
 func (m *testUserNsPodsManager) ListPodsFromDisk() ([]types.UID, error) {
